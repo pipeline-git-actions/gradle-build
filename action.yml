@@ -1,12 +1,12 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'Gradle build Task'
+description: 'Github Actions for Gradle build.'
+author: 'Linjith'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  mode:
+    description: 'Build mode'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.mode }}
